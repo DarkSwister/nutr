@@ -10,7 +10,7 @@ use Maatwebsite\Excel\Concerns\WithLimit;
 use Maatwebsite\Excel\Row;
 use Str;
 
-class ImportRecipe implements OnEachRow, WithLimit, WithChunkReading
+class ImportRecipe implements OnEachRow, WithChunkReading
 {
     public function onRow(Row $row)
     {
