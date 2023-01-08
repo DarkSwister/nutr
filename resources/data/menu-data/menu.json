@@ -1,0 +1,46 @@
+{
+    "menu": [
+        {
+            "name": "Meal Planner",
+            "icon": "calendar",
+            "slug": "",
+            "url": ""
+        },
+        {
+            "name": "Shopping Lists",
+            "icon": "list",
+            "slug": "",
+            "url": ""
+        },
+        {
+            "name": "All Recipes",
+            "icon": "book-open",
+            "slug": "",
+            "url": "/recipes"
+        },
+        {
+            "name": "Search",
+            "icon": "search",
+            "slug": "",
+            "url": ""
+        },
+        {
+            "name": "Categories",
+            "icon": "tag",
+            "slug": "",
+            "url": "/categories"
+        },
+        {
+            "name": "Tags",
+            "icon": "tag",
+            "slug": "",
+            "url": "/tags"
+        },
+        {
+            "name": "Tools",
+            "icon": "box",
+            "slug": "",
+            "url": ""
+        }
+    ]
+}
