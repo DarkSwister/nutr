@@ -140,7 +140,7 @@ Route::group(['as' => 'frontend.'], function () {
             ->name('dashboard');
 
 
-        Route::get('profile', [ProfileController::class, 'profile'])
+        Route::get('profile', \App\Http\Livewire\User\Settings\ProfileSettings::class)
             ->name('profile');
 
         Route::group(['prefix' => 'profile-settings'], function () {

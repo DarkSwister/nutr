@@ -56,11 +56,6 @@ class ImportRecipe implements OnEachRow, WithLimit, WithChunkReading
     }
 
 
-    public function limit(): int
-    {
-        return 10000; // only take 10000 rows
-    }
-
     public function chunkSize(): int
     {
         return 1000;
