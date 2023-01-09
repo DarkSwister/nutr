@@ -96,7 +96,8 @@ class MealService
         }
         return $toBeGenerated;
     }
-
+    
+    //Iterate over Day map which contain meal type boolean values if its present in this day.
     private function generateMealListPerDay(): array
     {
         $dayMap = $this->getDayMap();
@@ -113,7 +114,8 @@ class MealService
     {
         return $this->createMeals($this->generateMealListPerWeek());
     }
-
+    
+    //Iterate over week map and find simmilarities, if not found create new recipe.
     private function createMeals(array $mealList)
     {
         foreach ($mealList as $day => $meals) {
@@ -123,7 +125,7 @@ class MealService
         }
         return true;
     }
-
+    
     public function regenerateDayMeal(): bool
     {
         $this->model->mealPlans()->whereDate('date', $this->date)->delete();
@@ -137,7 +139,8 @@ class MealService
         $this->model->mealPlans()->whereBetween('date', [$weekStartDate, $weekEndDate])->delete();
         return $this->createMeals($this->generateMealListPerWeek());
     }
-
+    //EatType -> ēdienreizes tips. Brokastis/Pusdienas/Vakariņas
+    //Nofiltrejam receptes pēc tagiem, atbilstoši maltītes tipam
     public function findMeal(string $eatType)
     {
         return Recipe::when($eatType === 'breakfast', function ($q) {
